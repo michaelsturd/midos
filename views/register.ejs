@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <!-- <h1>Welcome to your dreams</h1> -->
+    <div class="signIn-Form">
+        <div class="top">
+            <h1>sign up</h1>
+        </div>
+        <form action="">
+            <label for="">Full Name</label>
+            <input type="text" name="" id="" placeholder="Enter fullname">
+            <label for="">Email</label>
+            <input type="text" name="" id="" placeholder="Enter email">
+            <label for="">Phone Number</label>
+            <input type="text" name="" id="" placeholder="Enter phone">
+            <label for="">password</label>
+            <input type="text" name="" id="" placeholder="Enter password">
+            <button id="signinbtn" class="signinBtn">submit</button>
+        </form>
+
+        <div class="bottom">
+            <a href="#">forgot password?</a>
+        </div>
+    </div>
+
+    <script>
+        let signinBtn = document.getElementById("signinbtn")
+        signinBtn.addEventListener('click', (e)=>{
+            e.preventDefault();
+            alert('Notification Required');
+        })
+    </script>
+</body>
+</html>

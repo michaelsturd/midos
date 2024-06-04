@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    height: 680px;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('/assets/');
+    /* background-color: #68f0e0; */
+    background-position: center;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #fff;
+}
+
+.header-top{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+    padding: 5px;
+    /* border: 1px solid #eee; */
+    
+}
+
+.header-top .logo-area a{
+    color: #376d6d;
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.header-top ul{
+    display: flex;
+    list-style: none;
+}
+
+.header-top ul li{
+    padding: 10px;
+}
+
+.header-top ul li a{
+    color: #376d6d;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.header .header-top .menuIcon{
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000;
+}
+
+.header .header-top .menuIcon .lines{
+    width: 30px;
+    height: 2px;
+    margin: 4px;
+    background-color: #fff;
+}
+/* mini topbar style  */
+.header-mini-top{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px auto;
+    z-index: 0;
+    position: absolute;
+    top: 0%;
+    border: 1px solid #ddd;
+    background-color: #376d6d;
+    
+}
+
+.header-mini-top .logo-area a{
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.header-mini-top ul{
+    display: block;
+    list-style: none;
+}
+
+.header-mini-top ul li{
+    padding: 10px;
+}
+
+.header-mini-top ul li a{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.header-top .donorBtn{
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #376d6d;
+}
+
+.header .header-contents{
+    width: 80%;
+    height: inherit;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #eee; */
+}
+
+.header-contents .left{
+    display: flex;
+    flex: 1;
+    height: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.header-contents .left h1{
+    text-transform: uppercase;
+}
+.header-contents .right{
+    display: flex;
+    flex: 1;
+    height: inherit;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.header-contents .title{
+    font-size: 60px;
+    margin-bottom: -15px;
+    text-transform: uppercase;
+}
+.header-contents .getStarted{
+    color: #fff;
+    padding: 10px 13px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 15px;
+    transition: all ease .3s;
+    border: 2px solid #376d6d;
+    background-color: #376d6d;
+}
+
+.header-contents .getStarted:hover{
+    color: #376d6d;
+    padding: 10px 13px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    transition: all ease .3s;
+    border: 2px solid #376d6d;
+    background-color: #6dc6c6;
+}
+
+.payment-form{
+    width: 80%;
+}
+
+.quickpay{
+    /* width: 100%; */
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    /* border: 1px solid red; */
+}
+.quickpay input{
+    padding: 10px 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: block;
+    width: 100%;
+    outline: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.quickpay a{
+    color: #ddd;
+    padding:8px 16px;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #376d6d;
+}
+
+.leads{
+    width: 90%;
+    padding: 16px;
+    display: flex;
+    margin: 20px auto;
+    /* background-image: linear-gradient(red, green,); */
+}
+
+.leads .lead-left{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lead-left p{
+    line-height: 30px;
+    font-weight: 100;
+}
+
+/* .leads  */
+
+.leads .lead-box{
+    width: 80%;
+    padding: 18px;
+    border-radius: 4px;
+    background-color: #eee;
+
+}
+
+.lead-title{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.leads .lead-box p{
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 35px;
+    letter-spacing: 2px;
+}
+
+.pay-bills{
+    width: 87%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 500px;
+    margin: 40px auto;
+    border: 1px solid #eee;
+    /* background-color: #000; */
+}
+/* registration page styles */
+.signIn-Form .top{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-transform: uppercase;
+    margin: 10px auto;
+    border-bottom: 2px solid #eee;
+}
+
+.signIn-Form .bottom{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0px auto;
+    border-top: 2px solid #eee;
+}
+.signIn-Form{
+    width: 30%;
+    height: 590px;
+    padding: 30px;
+    margin: 60px auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 3px 10px 0px #ddd;
+}
+
+.signIn-Form form{
+    display: block;
+    margin: 30px auto;
+}
+
+.signIn-Form form label, input{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.signIn-Form form input{
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid #eee;
+    outline: none;
+}
+
+.signinBtn{
+    color: #fff;
+    padding: 14px 17px;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #000;
+    border: 1px solid #000;
+}
+
+
+
+/* mobile screen styles starts here  */
+@media(max-width: 480px){
+    .header-top ul{
+        display: none;
+    }
+
+    .header-mini-top{
+        display: none;
+    }
+
+    .header .header-contents{
+        width: 90%;
+        
+        /* height: 400px; */
+        /* padding: 100px; */
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }
+
+    .header .header-contents .left .title{}
+
+    .header .header-contents .right{
+        width: 100%;
+    }
+
+    *{
+        /* border: 1px solid red; */
+    }
+
+    .header-contents .title{
+        font-size: 30px;
+    }
+    .header .header-contents .payment-form{
+        width: 100%;
+        /* border: 1px solid; */
+    }
+
+    .header .header-contents .payment-form h3{
+        margin-left: 14px;
+    }
+
+    .header .header-contents .payment-form form{
+        width: 90%;
+    }   
+
+    .header .header-contents .payment-form input{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid;
+    }
+
+    .signIn-Form{
+        width: 90%;
+        padding: 10px;
+    }
+    .signIn-Form .top{
+        padding: 3px;
+        margin: 0px auto;
+    }
+
+    .signIn-Form label{
+        font-size: 10px;
+    }
+
+    .leads{
+        width: 88%;
+        /* border: 1px solid red; */
+        flex-direction: column;
+    }
+
+    .leads .lead-left{
+        width: 100%;
+    }
+
+    .leads .lead-box{
+        width: 90%;
+    }
+    .leads .lead-box p{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .pay-bills{
+        width: 95%;
+        background-color: #000;
+    }
+}
