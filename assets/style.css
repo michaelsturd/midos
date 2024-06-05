@@ -489,4 +489,8 @@ body{
         width: 95%;
         background-color: #000;
     }
+
+    .slider{
+        width: 95%;
+    }
 }
