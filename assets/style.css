@@ -328,7 +328,80 @@ body{
 }
 
 
+/* gallery for images slider style */
 
+.gallery *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(25, 12, 41); */
+}
+
+.slider{
+    position: relative; 
+    /* display: flex; */
+    width: 60%;
+    /* border: 1px solid red; */
+    background-color: rgb(25, 12, 41);
+    overflow: hidden;
+}
+
+.gallery .slider .images{
+    display: flex;
+    width: 100% ;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.images img{
+    height: 400px;
+    width: 100%;
+    transition: all 0.13s ease;
+}
+
+.images input{
+    display: none;
+}
+
+.dots{
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+}
+
+.dots label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+
+.dots label:hover{
+    background-color: #fff;
+}
+
+#img1:checked ~ .m1{
+    margin-left: 0;
+}
+
+
+#img2:checked ~ .m2{
+    margin-left: -100%;
+}
+
+#img3:checked ~ .m3{
+    margin-left: -200%;
+}
 /* mobile screen styles starts here  */
 @media(max-width: 480px){
     .header-top ul{
