@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <!-- <h1>Welcome to your dreams</h1> -->
@@ -13,13 +15,13 @@
         </div>
         <form action="">
             <label for="">Full Name</label>
-            <input type="text" name="" id="" placeholder="Enter fullname">
+            <input type="text" name="" id="fullname" placeholder="Enter fullname">
             <label for="">Email</label>
-            <input type="text" name="" id="" placeholder="Enter email">
+            <input type="text" name="" id="email" placeholder="Enter email">
             <label for="">Phone Number</label>
-            <input type="text" name="" id="" placeholder="Enter phone">
+            <input type="text" name="" id="phone" placeholder="Enter phone">
             <label for="">password</label>
-            <input type="text" name="" id="" placeholder="Enter password">
+            <input type="text" name="" id="password" placeholder="Enter password">
             <button id="signinbtn" class="signinBtn">submit</button>
         </form>
 
@@ -29,11 +31,22 @@
     </div>
 
     <script>
-        let signinBtn = document.getElementById("signinbtn")
-        signinBtn.addEventListener('click', (e)=>{
-            e.preventDefault();
-            alert('Notification Required');
+        $(document).ready(()=>{
+            let signinBtn = document.getElementById("signinbtn")
+            signinBtn.addEventListener('click', (e)=>{
+                e.preventDefault();
+                // let error = [];
+                let fullname = $("#fullname").val();
+                let email = $("#email").val();
+                let phone = $("#phone").val();
+                let password = $("#password").val();
+                if (fullname == '') {
+                    alert('Fullname can not be empty')
+                }
+
+            });
         })
+       
     </script>
 </body>
 </html>

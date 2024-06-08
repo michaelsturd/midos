@@ -55,10 +55,10 @@ body{
 }
 
 .header .header-top .menuIcon{
+    display: none;
     width: 30px;
     height: 30px;
     padding: 4px;
-    display: flex;
     cursor: pointer;
     overflow: hidden;
     border-radius: 4px;
@@ -78,15 +78,16 @@ body{
 /* mini topbar style  */
 .header-mini-top{
     display: none;
-    width: 100%;
+    width: 98%;
     height: 100vh;
-    align-items: center;
+    padding: 10px;
+    /* align-items: center; */
     justify-content: space-between;
     margin: 0px auto;
-    z-index: 0;
+    z-index: 999;
     position: absolute;
     top: 0%;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     background-color: #376d6d;
     
 }
@@ -309,11 +310,16 @@ body{
     margin-bottom: 10px;
 }
 
+.signIn-Form form label{
+    display: none;
+}
+
 .signIn-Form form input{
     width: 100%;
     padding: 13px 16px;
     border: 1px solid #eee;
     outline: none;
+    margin-bottom: 30px;
 }
 
 .signinBtn{
@@ -322,11 +328,11 @@ body{
     border-radius: 4px;
     font-weight: 600;
     width: 100%;
+    cursor: pointer;
     text-transform: uppercase;
     background-color: #000;
     border: 1px solid #000;
 }
-
 
 /* gallery for images slider style */
 
@@ -408,8 +414,50 @@ body{
         display: none;
     }
 
+    .header .header-top .menuIcon{
+        display: flex;
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 4px;
+        position: relative;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #000;
+    }
+    .header-mini-top *{
+        /* border: 1px solid red; */
+    }
+
     .header-mini-top{
+        background-color: #000;
+        width: 96%;
         display: none;
+        position: fixed;
+        align-items: ;
+        height: 100v;
+        z-index: 999;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .header-mini-top .logo-area{
+        margin: 10px;
+    }
+
+    .header-mini-top ul{
+        display: flex;
+        /* margin-top: -20px; */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-mini-top ul li{
+        padding: 20px;
+        margin-left: -40px;
     }
 
     .header .header-contents{
@@ -463,6 +511,7 @@ body{
     }
 
     .signIn-Form label{
+        display: none;
         font-size: 10px;
     }
 
@@ -490,7 +539,18 @@ body{
         background-color: #000;
     }
 
+    .gallery{
+        margin: 0px auto;
+        height: 300px;
+        /* border: 1px solid red; */
+    }
+
     .slider{
         width: 95%;
+        height: auto;
+    }
+
+    .slider img{
+        height: auto;
     }
 }
