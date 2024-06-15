@@ -1,0 +1,21 @@
+.feed-wrap{
+    display: block;
+    width: 98%;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.feeds{
+    display: flex;
+    width: 100%;
+    margin: 0px auto;
+    align-items: center;
+    border: 1px solid #d1c8c8;
+    background-color: #fbecec;
+    justify-content: space-between;
+}
+
+.feeds .feed-side-bar{
+    padding: 10px;
+    border: 1px solid red;
+}

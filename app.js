@@ -13,4 +13,8 @@ app.get('/', (req, res)=>{
 app.get('/register', (req, res)=>{
     res.render('register')
 })
+
+app.get('/feed', (req, res)=>{
+    res.render('feed')
+})
 app.listen(3000, console.log('listening to port 3000'));

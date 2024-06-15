@@ -259,15 +259,60 @@ body{
 }
 
 .pay-bills{
-    width: 87%;
+    width: 99%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 10px;
     height: 500px;
-    margin: 40px auto;
-    border: 1px solid #eee;
-    /* background-color: #000; */
+    margin: 0px auto;
+    /* border: 1px solid #eee; */
+    background-color: #000;
+}
+
+.bill-grid{
+    color: #eee;
+    display: grid;
+    padding: 10px;
+    width: 98%;
+    margin: 10px auto;
+    /* border: 1px solid #eee; */
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bill-grid-child{
+    padding: 10px;
+    margin: 4px auto;
+    /* border: 1px solid #eee; */
+}
+
+.bill-grid-child .title{
+    color: #7926b4;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.descr-lines{
+    padding: 10px;
+    border-bottom: 1px solid green;
+}
+
+#generateBtn{
+    padding: 10px 13px;
+    cursor: pointer;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #7926b4;
+    transition: all ease 0.3s;
+    background-color: #7926b4;
+}
+
+.bill-grid-child input{
+    padding: 5px 10px;
+    margin: 8px;
+    outline: none;
+    width: 95%;
 }
 /* registration page styles */
 .signIn-Form .top{
@@ -408,6 +453,16 @@ body{
 #img3:checked ~ .m3{
     margin-left: -200%;
 }
+
+
+.footer{
+    width: 99%;
+    padding: 10px;
+    display: flex;
+    margin: 0px auto;
+    background-color: #ddd;
+}
+
 /* mobile screen styles starts here  */
 @media(max-width: 480px){
     .header-top ul{
@@ -437,7 +492,7 @@ body{
         width: 96%;
         display: none;
         position: fixed;
-        align-items: ;
+        /* align-items: ; */
         height: 100v;
         z-index: 999;
         justify-content: flex-start;
@@ -462,14 +517,15 @@ body{
 
     .header .header-contents{
         width: 90%;
-        
         /* height: 400px; */
         /* padding: 100px; */
         flex-direction: column;
         /* border: 1px solid red; */
     }
 
-    .header .header-contents .left .title{}
+    .header .header-contents .left .title{
+        
+    }
 
     .header .header-contents .right{
         width: 100%;
@@ -552,5 +608,9 @@ body{
 
     .slider img{
         height: auto;
+    }
+
+    .bill-grid{
+        grid-template-columns: 1fr;
     }
 }

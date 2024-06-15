@@ -50,11 +50,69 @@
         </div>
         <div class="pay-bills">
             <h1>Pay Bills Today</h1>
+            <div class="bill-grid">
+                <div class="bill-grid-child">
+                    <div class="title">POS Deposit</div>
+                    <div class="descr-lines">
+                        Visit Our nearest Stand
+                    </div>
+                    <div class="descr-lines">
+                        Enter Recipient Account Number
+                    </div>
+
+                    <div class="descr-lines">
+                        Choose Amount
+                    </div>
+                </div>
+
+                <div class="bill-grid-child">
+                    <div class="title">POS Deposit</div>
+                    <div class="descr-lines">
+                        Visit Our nearest Stand
+                    </div>
+                    <div class="descr-lines">
+                        Enter Recipient Account Number
+                    </div>
+
+                    <div class="descr-lines">
+                        Choose Amount
+                    </div>
+                </div>
+
+                <div class="bill-grid-child">
+                    <div class="title">Don't Get Caught Receiving Money</div>
+                    <div class="descr-lines">
+                        Use our hybrid links to get paid anywhere
+                    </div>
+                    <div class="descr-lines">
+                        <button id="generateBtn">Generate Link</button>
+                        <input type="text" name="" id="" placeholder="Enter reference code">
+                       
+                    </div>
+
+                    <div class="descr-lines">
+                        Transpose Email Address 
+                        <button>Okay</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer">
-
+        <div class="footer-top-area">
+            <h1>Hybrid-Softwares</h1>
+        </div>
     </div>
-    
+    <script>
+        let toggleNav;
+        toggleNav = document.getElementById('toggleNav');
+        
+
+        toggleNav.addEventListener('click',(e)=>{
+        // $("#miniTop").css('display', 'flex')
+        let miniTop = document.getElementById('toggleNav');
+        miniTop.style.display = 'block'
+        })
+    </script>
 </body>
 </html>
