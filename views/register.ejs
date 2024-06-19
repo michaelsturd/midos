@@ -4,7 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="/assets/style.css">
+   
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- <script src="sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
@@ -41,7 +44,23 @@
                 let phone = $("#phone").val();
                 let password = $("#password").val();
                 if (fullname == '') {
-                    alert('Fullname can not be empty')
+                    // alert('Fullname can not be empty')
+                    Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Sorry, full name can not be empty",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                    });
+                }else{
+                    let userInputs = {fullname: fullname, email: email, phone: phone, password: password}
+                    $.ajax({
+                        method: 'POST',
+                        url:'/register',
+                        data: userInputs,
+                        success: function(response){
+                            console.log(response)
+                        }
+                    })
                 }
 
             });

@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/assets/style.css"> -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- <script src="sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        .wrapper{
+            width: 50%;
+            display: flex;
+            height: 400px;
+            padding: 10px;
+            margin: 100px auto;
+            /* align-items: center; */
+            justify-content: center;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 3px 8px grey;
+        }
+        .form label, input{
+            display: block;
+        }
+        .form input{
+            padding: 10px 16px;
+            outline: none;
+            border-radius: 5px;
+            margin-bottom: 6px;
+            margin-top: 5px;
+            border: 3px solid dodgerblue;
+        }
+        .form button{
+            padding: 4px 8px;
+            color: #fff;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            background-color: dodgerblue;
+        }
+
+        @media(max-width:480px){
+            .wrapper{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="bookshop">
+            <h2>Welcome to bookshop</h2>
+            <p>Find your most experience books.</p>
+            <h1>Add Book</h1>
+            <div class="form">
+            <label for="">Book title</label>
+            <input type="text" name="" id="title">
+            <label for="">Price</label>
+            <input type="text" name="" id="price">
+            <button id="addbk">Add</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(()=>{
+            let bookBtn = document.getElementById("addbk")
+            bookBtn.addEventListener('click', (e)=>{
+                e.preventDefault();
+                // let error = [];
+                let title = $("#title").val();
+                let price = $("#price").val();
+                 if (title == '') {
+                    // alert('Fullname can not be empty')
+                    Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Sorry, Book title can not be empty",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                    });
+                }else{
+                    let bookItems = {title: title, price: price}
+                    $.ajax({
+                        method: 'POST',
+                        url:'/books',
+                        data: bookItems,
+                        success: function(response){
+                            console.log(response)
+                        }
+                    })
+                }
+
+            });
+        })
+       
+    </script>
+</body>
+</html>
